@@ -8,7 +8,7 @@
                 Cadastrar
             </v-btn>
         </router-link>
-        <div class="d-flex  ma-16 flex-wrap justify-center">
+        <div v-if="users.length != 0"  class="d-flex ma-16 flex-wrap justify-center">
             <v-card class="ma-5" v-for="user in users" :key="user.id" width="344" height="344" elevation="9" outlined shaped>
                 <v-list-item three-line>
                     <v-list-item-content>
@@ -39,6 +39,7 @@
                    
             </v-card>
         </div>
+        <v-card v-else class="d-flex ma-16 flex-wrap justify-center" >Não tem ninguem ainda! :(</v-card>
 
 
     </div>
